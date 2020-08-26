@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Menu Move.wav-cf4eee0cbba671ce4d02c6a660c22747.sample"
+
+[deps]
+
+source_file="res://resources_folder/Action RPG Resources/Action RPG Resources/Music and Sounds/Menu Move.wav"
+dest_files=[ "res://.import/Menu Move.wav-cf4eee0cbba671ce4d02c6a660c22747.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
