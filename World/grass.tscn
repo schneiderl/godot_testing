@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://grass.gd" type="Script" id=1]
 [ext_resource path="res://World/Grass.png" type="Texture" id=2]
+[ext_resource path="res://Overlap/HurtBox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.04291, 5.51886 )
 
 [node name="grass" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,3 +15,13 @@ position = Vector2( -2.47714, -2.27087 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -8, -8 )
+
+[node name="HurtBox" parent="." instance=ExtResource( 3 )]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2( 5.51215, 5.66964 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+
+[editable path="HurtBox"]
