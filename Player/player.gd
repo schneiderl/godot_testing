@@ -21,8 +21,6 @@ func _ready():
 	animationTree.active = true
 
 func _process(delta):
-	if Input.is_action_just_pressed("attack"):
-		state = ATTACK
 	match state:
 		MOVE:
 			move_state(delta)
@@ -49,6 +47,8 @@ func move_state(delta):
 		animationState.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
+	if Input.is_action_just_pressed("attack"):
+		state = ATTACK
 	velocity = move_and_slide(velocity)
 	
 
